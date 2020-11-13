@@ -7,7 +7,115 @@ body {
     text-decoration: none;
 }
 
+header {
+    min-height: 350px;
+    background-color: #929eaa;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/exercises/assets/banner.jpeg);
+    background-size: cover;
+    position: relative;
+}
 
+header > * {
+    z-index: 10;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.profile-image {
+    background-image: url(/exercises/assets/profile.jpg);
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-subtext {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.main {
+    min-height: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 800px;
+    min-width: 300px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.post {
+    display: flex;
+    min-height: 180px;
+    border-radius: 8px;
+    border: 1px solid lavender;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+.post:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.post-image {
+    flex-basis: 40%;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    flex-basis: 60%;
+    padding: 16px;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: gray;
+    padding-bottom: 20px;
+}
+
+.post-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-weight: 700;
+}
+
+.post-details {
+    padding-top: 5px;
+    line-height: 1.2;
+    max-height: 60px;
+    overflow: hidden;
+    color: black;
+    font-weight: 500;
+}
 
 footer {
     min-height: 100px;
@@ -18,4 +126,33 @@ footer {
     align-items: center;
     margin-top: 40px;
     font-size: 14px;
+}
+
+.nav-button.new-post-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    background-color: brown;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.25s ease;
+}
+
+.nav-button.new-post-button:hover {
+    background-color: tomato;
+}
+
+.navigation a {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: #333;
 }

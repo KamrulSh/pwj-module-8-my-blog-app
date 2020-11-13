@@ -1,13 +1,23 @@
 /* ADD styling for all of the divs in post.html to match  */
 
-#individual-post-title {
-
+.individual-post-title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    font-weight: bold;
 }
 
-#individual-post-date {
-
+.individual-post-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: gray;
+    padding: 20px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
-#individual-post-content {
-
+.individual-post-content {
+    padding: 20px;
+    line-height: 1.4;
+    text-align: justify;
 }
